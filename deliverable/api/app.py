@@ -8,7 +8,7 @@ import time
 from pathlib import Path
 
 APP_DIR = Path(__file__).parent
-mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
 model = mlflow.pyfunc.load_model(str(APP_DIR / "artifacts"))
 
 app = FastAPI(title="Titanic Classifier API")
